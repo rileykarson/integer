@@ -2,12 +2,28 @@ html, body {
   margin: 0px;
   padding: 0px;
   font-family: Verdana, Geneva, sans-serif;
+  background-image: url("../img/matrix.gif");
 }
 
 #result {
-    text-align: center;
+    font-family: Ubuntu, Trebuchet, sans-serif;
+    font-size: 4rem;
 }
 
 #resultHolder {
     text-align: center;
+    background-color: #EEE;
+    box-shadow: 0px 0px 10px black;
+    margin-bottom: 2.5rem;
+}
+
+.byte {
+}
+
+.nibble {
+    text-align: right;
+}
+
+.nibble:nth-child(2n){
+    text-align: left;
 }
