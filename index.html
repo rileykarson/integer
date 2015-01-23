@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Unsigned Integer Calculator</title>
+        <title>CISC 221 Calculator</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href = "//cdn.foundation5.zurb.com/foundation.css" rel="stylesheet">
@@ -16,70 +16,99 @@
     </head>
     <body>
     <div class = "row">
-        <div class = "small-12 columns" id="resultHolder">
-            <span id = "result">0</span>
+        <div class = "small-12 columns panel resultHolder">
+            <span class = "unselectable displayText">Decimal: </span>
+            <span id = "decDisplay" class = "displayText">0</span>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "small-12 columns panel resultHolder">
+            <span class = "unselectable displayText">Hexadecimal: </span>
+            <span id = "hexDisplay" class = "displayText">0x00000000</span>
         </div>
     </div>
     <div class="row">
-        <div class = "byte columns small-3 panel">
+        <div class = "byte columns small-12 medium-6 large-3 panel">
             <div class = "row">
-                <div class = "nibble columns small-12 medium-6">
-                <a href="#" id="button1" class="bit">0</a>
-                <a href="#" id="button2" class="bit">0</a>
-                <a href="#" id="button3" class="bit">0</a>
-                <a href="#" id="button4" class="bit">0</a>
-                </div><div class = "nibble columns small-12 medium-6">
-                <a href="#" id="button5" class="bit">0</a>
-                <a href="#" id="button6" class="bit">0</a>
-                <a href="#" id="button7" class="bit">0</a>
-                <a href="#" id="button8" class="bit">0</a>
+                <div class = "nibble unselectable columns small-12 medium-6">
+                <a id="button1" class="bit">0</a>
+                <a id="button2" class="bit">0</a>
+                <a id="button3" class="bit">0</a>
+                <a id="button4" class="bit">0</a>
+                </div><div class = "nibble unselectable columns small-12 medium-6">
+                <a id="button5" class="bit">0</a>
+                <a id="button6" class="bit">0</a>
+                <a id="button7" class="bit">0</a>
+                <a id="button8" class="bit">0</a>
                 </div>
             </div>
         </div>
-        <div class = "byte columns small-3 panel">
+        <div class = "byte columns small-12 medium-6 large-3 panel">
             <div class = "row">
-            <div class = "nibble columns small-12 medium-6">
-                <a href="#" id="button9" class="bit">0</a>
-                <a href="#" id="button10" class="bit">0</a>
-                <a href="#" id="button11" class="bit">0</a>
-                <a href="#" id="button12" class="bit">0</a>
-                </div><div class = "nibble columns small-12 medium-6">
-                <a href="#" id="button13" class="bit">0</a>
-                <a href="#" id="button14" class="bit">0</a>
-                <a href="#" id="button15" class="bit">0</a>
-                <a href="#" id="button16" class="bit">0</a>
+            <div class = "nibble unselectable columns small-12 medium-6">
+                <a id="button9" class="bit">0</a>
+                <a id="button10" class="bit">0</a>
+                <a id="button11" class="bit">0</a>
+                <a id="button12" class="bit">0</a>
+                </div><div class = "nibble unselectable columns small-12 medium-6">
+                <a id="button13" class="bit">0</a>
+                <a id="button14" class="bit">0</a>
+                <a id="button15" class="bit">0</a>
+                <a id="button16" class="bit">0</a>
                 </div>
             </div>
         </div>
-        <div class = "byte columns small-3 panel">
+        <div class = "byte columns small-12 medium-6 large-3 panel">
             <div class = "row">
-            <div class = "nibble columns small-12 medium-6">
-                <a href="#" id="button17" class="bit">0</a>
-                <a href="#" id="button18" class="bit">0</a>
-                <a href="#" id="button19" class="bit">0</a>
-                <a href="#" id="button20" class="bit">0</a>
-                </div><div class = "nibble columns small-12 medium-6">
-                <a href="#" id="button21" class="bit">0</a>
-                <a href="#" id="button22" class="bit">0</a>
-                <a href="#" id="button23" class="bit">0</a>
-                <a href="#" id="button24" class="bit">0</a>
+            <div class = "nibble unselectable columns small-12 medium-6">
+                <a id="button17" class="bit">0</a>
+                <a id="button18" class="bit">0</a>
+                <a id="button19" class="bit">0</a>
+                <a id="button20" class="bit">0</a>
+                </div><div class = "nibble unselectable columns small-12 medium-6">
+                <a id="button21" class="bit">0</a>
+                <a id="button22" class="bit">0</a>
+                <a id="button23" class="bit">0</a>
+                <a id="button24" class="bit">0</a>
                 </div>
             </div>
         </div>
-        <div class = "byte columns small-3 panel">
+        <div class = "byte columns small-12 medium-6 large-3 panel">
             <div class = "row">
-            <div class = "nibble columns small-12 medium-6">
-                <a href="#" id="button25" class="bit">0</a>
-                <a href="#" id="button26" class="bit">0</a>
-                <a href="#" id="button27" class="bit">0</a>
-                <a href="#" id="button28" class="bit">0</a>
-                </div><div class = "nibble columns small-12 medium-6">
-                <a href="#" id="button29" class="bit">0</a>
-                <a href="#" id="button30" class="bit">0</a>
-                <a href="#" id="button31" class="bit">0</a>
-                <a href="#" id="button32" class="bit">0</a>
+            <div class = "nibble unselectable columns small-12 medium-6">
+                <a id="button25" class="bit">0</a>
+                <a id="button26" class="bit">0</a>
+                <a id="button27" class="bit">0</a>
+                <a id="button28" class="bit">0</a>
+                </div><div class = "nibble unselectable columns small-12 medium-6">
+                <a id="button29" class="bit">0</a>
+                <a id="button30" class="bit">0</a>
+                <a id="button31" class="bit">0</a>
+                <a id="button32" class="bit">0</a>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class= "panel row">
+        <div class = "row">
+            <div class = "large-3 medium-6 small-12 columns buttonHolder"><div class = "actionButton button unselectable" id = "shiftLeft">Shift Left</div></div>
+            <div class = "large-3 medium-6 small-12 columns buttonHolder"><div class = "actionButton button unselectable" id = "shiftRight">Shift Right</div></div>
+            <div class = "large-3 medium-6 small-12 columns buttonHolder"><div class = "actionButton button unselectable" id = "clear">Clear</div></div>
+            <div class = "large-3 medium-6 small-12 columns buttonHolder"><div class = "actionButton button unselectable" id = "ones">Ones</div></div>
+        </div>
+        <div class = "row">
+            <div class = "small-12 columns buttonHolder"><div class = "actionButton button unselectable" id = "modeSwap">Mode: Unsigned</div></div>
+        </div>
+    </div>
+    <div class = "panel row">
+        <div class = "large-3 medium-6 small-12 columns buttonHolder"><div class = "actionButton button unselectable" id = "nShift">N-Shift</div></div>
+        <div class = "large-3 medium-6 small-12 columns buttonHolder"><div class = "actionButton button unselectable" id = "shiftMode">Logical Shift</div></div>
+        <div class = "large-3 medium-6 small-12 columns buttonHolder"><div class = "actionButton button unselectable" id = "shiftDirection">Direction: Left</div></div>
+        <div class = "large-3 medium-6 small-12 columns buttonHolder"><input type = "number" id = "numShifts" value="1"></input></div>
+    </div>
+    <div class = "row">
+        <div class = "small-12 columns panel">
+            <span id = "footerSpan">CISC 22Fun Calculator, made by Riley Karson.</span>
         </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
